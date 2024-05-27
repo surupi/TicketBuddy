@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+
+    <p>Congratulations for booking. Your report for {{ month }} month is:</p>
+    
+
+    <table>
+        <thead>
+          <tr>
+            <th>Venue Name</th>
+            <th>Bookings</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for booking in bookings %}
+          <tr>
+            <td>{{ booking.venue.venue_name }}</td>
+            <td>{{ booking.number_of_tickets }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+
+
+    <p>Regards,</p>
+    <p>Team TicketBuddy</p>
+    
+</body>
+</html>
